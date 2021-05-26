@@ -12,7 +12,8 @@ app = Flask(__name__)
 config = configparser.ConfigParser()
 config.read('config.ini')
 
-line_bot_api = LineBotApi(config.get('line-bot', 'channel_access_token'))
+line_bot_api = LineBotApi(OsH7XLAEZ4QPNlLlcjsQeegLJigfbU9mHUqBRL30TiOc2CJWpcfMiSDyYLG8CrKOJ6ik9lBwS14CWZjCKnytkw7gkFbpzxqDNtQvjYTxRMLJDfEyddXDQYYB1YDWYB1YDQY1DQY1Y1DWYB1QY1DW1B1D9DQY1DQ1Y1E0DQY1Y1D0Y1B1D0Y1B1B1B1B)
+
 handler = WebhookHandler(config.get('line-bot', 'channel_secret'))
 
 # 接收 LINE 的資訊
